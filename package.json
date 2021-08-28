@@ -1,0 +1,22 @@
+{
+  "name": "tslearn",
+  "version": "1.0.0",
+  "description": "learn ts",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/blueeagle3235/typescriptlearning.git"
+  },
+  "author": "Aaron",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/blueeagle3235/typescriptlearning/issues"
+  },
+  "homepage": "https://github.com/blueeagle3235/typescriptlearning#readme",
+  "devDependencies": {
+    "jest": "^27.1.0"
+  }
+}
