@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/blueeagle3235/typescriptlearning#readme",
   "devDependencies": {
+    "@types/jest": "^27.0.1",
     "jest": "^27.1.0"
   }
 }
