@@ -1,4 +1,9 @@
-# TypesScript learning
+# TypesScript learning road map
+
+- Basics
+- Toolings
+- Type basics
+- Type advanced
 
 ## Resources
 
