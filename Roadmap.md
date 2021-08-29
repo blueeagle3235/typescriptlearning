@@ -8,4 +8,8 @@
 
 ### Tutorials
 
+<https://www.tutorialsteacher.com/typescript>
+
 <https://www.typescriptlang.org/docs/handbook/intro.html>
+
+<https://devdocs.io/typescript/>
