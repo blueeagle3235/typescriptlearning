@@ -23,6 +23,8 @@
 
 <https://www.tutorialsteacher.com/typescript>
 
+<https://www.javatpoint.com/typescript-tutorial>
+
 <https://www.typescriptlang.org/docs/handbook/intro.html>
 
 <https://devdocs.io/typescript/>

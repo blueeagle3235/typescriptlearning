@@ -1,3 +1,4 @@
+// the is one type number for all the numbers
 let int: number = 6;
 let decimal: number = 6.1;
 let hex: number = 0xf00d;
