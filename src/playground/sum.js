@@ -1,7 +1,7 @@
 "use strict";
 exports.__esModule = true;
 /**
- * a sum fuction
+ * a sum function
  * @param a first number
  * @param b second number
  * @returns the sum
