@@ -16,9 +16,13 @@ let newNumbers1 = numbers.forEach((n) => {
 });
 console.log(numbers);
 console.log(newNumbers1); //undefined
+
 // #endregion
 
 // #region map() related
+
+// map() builds a new array
+// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map
 // map() takes in an expression and the array with same length but updated values
 let newNumbers2 = numbers.map((n) => n * 2);
 //let newNumbers2 = numbers.map((n) => (n = n * 2)); //wrong
