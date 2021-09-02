@@ -32,3 +32,5 @@
 <https://www.typescriptlang.org/docs/handbook/intro.html>
 
 <https://devdocs.io/typescript/>
+
+<https://devblogs.microsoft.com/typescript/>
