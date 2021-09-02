@@ -2,6 +2,9 @@
 
 - Basics
   - Primitive types
+      - boolean
+      - number
+      - string
   - Array
     - [spread syntax](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax)
   - JSON
