@@ -1,4 +1,5 @@
 let numbers: number[] = [0, 2, 4, 6, 8, 10];
+numbers.sort()
 console.log(numbers);
 
 // change values inline
