@@ -8,3 +8,12 @@
 export default function sum(a: number, b: number): number {
   return a + b;
 }
+
+// the recursion version
+// export default function sum(arr: number[]): number {
+//   if (arr.length === 0) return 0;
+
+//   const [head, ...tail] = arr;
+
+//   return head + sum(tail);
+// }
