@@ -1,4 +1,5 @@
 // https://www.typescriptlang.org/play?noImplicitAny=false&q=256#example/functions
+// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions
 
 // declare a function
 // usually function has name, arrow function can be anonymous
@@ -8,7 +9,8 @@
 // default values of parameters
 
 // parameters with spread syntax
-
+// A function definition can have only one ...restParam.
+// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/rest_parameters
 // #endregion
 
 // returns or void

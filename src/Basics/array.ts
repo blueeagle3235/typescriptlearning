@@ -16,6 +16,7 @@ for (var i = 0; i < numbers.length; i++) {
 // #endregion
 
 // #region array and spread operator
+console.log("---------------array and spread operator...---------------");
 
 // rest parameter has to be the last parameter in the parameter list
 function foo(...args: number[]) {
@@ -55,14 +56,20 @@ function sum(...array: number[]): number {
 }
 let result1 = sum(1, 2, 3, 4, 5);
 let mynumbers = [1, 2, 3, 4, 5];
+// use the ...operator in arguments so to convert the array to rest argument
 let result2 = sum(...mynumbers);
 console.log(result1);
 console.log(result2);
 
+let [x, y, ...remaining] = [1, 2, 3, 4, 5, 6, 7];
+console.log(x); //1
+console.log(y); //2
+console.log(remaining); //[3, 4, 5, 6, 7];
+
 // #endregion
 
 // #region foreach() related
-
+console.log("---------------foreach() related---------------");
 // forEach does not change values inline, and is void so it returns undefined
 let newNumbers1 = numbers.forEach((n) => {
   n = n * 2;
