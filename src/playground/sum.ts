@@ -5,15 +5,18 @@
  * @param b second number
  * @returns the sum
  */
-export default function sum(a: number, b: number): number {
-  return a + b;
-}
+// export default function sum(a: number, b: number): number {
+//   return a + b;
+// }
 
 // the recursion version
-// export default function sum(arr: number[]): number {
-//   if (arr.length === 0) return 0;
+export default function sum(...arr: number[]): number {
+  if (arr.length === 0) return 0;
 
-//   const [head, ...tail] = arr;
+  let [head, ...tail] = arr;
 
-//   return head + sum(tail);
-// }
+  return head + sum(...tail);
+}
+
+// const sum = (...a: number[]) => a.reduce((acc, val) => acc + val, 0);
+// export default sum;

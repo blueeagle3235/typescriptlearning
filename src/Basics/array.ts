@@ -1,12 +1,65 @@
 let numbers: number[] = [0, 2, 4, 6, 8, 10];
-numbers.sort()
-console.log(numbers);
+numbers.sort((a, b) => b - a); // order by desc
+//console.log(numbers);
+
+// #region array use for loop to iterate
+
+for (var i = 0; i < numbers.length; i++) {
+  //console.log(numbers[i]);
+}
 
 // change values inline
 for (var i = 0; i < numbers.length; i++) {
   numbers[i] = numbers[i] / 2;
 }
-console.log(numbers);
+//console.log(numbers);
+// #endregion
+
+// #region array and spread operator
+
+// rest parameter has to be the last parameter in the parameter list
+function foo(...args: number[]) {
+  console.log(args);
+}
+
+function foo1(a: number, ...args: number[]) {
+  console.log(args);
+}
+
+// all extra arguments will be in the rest parameters
+foo(6, 5, 4, 3, 2, 1); //[ 6, 5, 4, 3, 2, 1 ]
+foo1(6, 5, 4, 3, 2, 1); //[ 5, 4, 3, 2, 1 ]
+let origArrayOne = [1, 2, 3];
+let origArrayTwo = [4, 5, 6];
+
+//Create new array from existing array
+let copyArray = [...origArrayOne];
+// even we change origArrayOne, it won't affect copyArray
+foo(...copyArray); // [1, 2, 3];
+//Create new array from existing array + more elements
+let newArray = [...origArrayOne, 7, 8];
+foo(...newArray); //[ 1, 2, 3, 7, 8 ]
+
+//Create array by merging two arrays
+let mergedArray = [...origArrayOne, ...origArrayTwo]; //1,2,3,4,5,6
+foo(...mergedArray); //[ 1, 2, 3, 4, 5, 6 ]
+
+// recursion with rest parameter
+function sum(...array: number[]): number {
+  if (array.length === 0) return 0;
+  //console.log(array.length);
+  let [head, ...rest] = array;
+  //console.log(head);
+  //console.log(rest);
+  return head + sum(...rest);
+}
+let result1 = sum(1, 2, 3, 4, 5);
+let mynumbers = [1, 2, 3, 4, 5];
+let result2 = sum(...mynumbers);
+console.log(result1);
+console.log(result2);
+
+// #endregion
 
 // #region foreach() related
 
