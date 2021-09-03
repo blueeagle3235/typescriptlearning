@@ -16,6 +16,17 @@ for (let i = 0; i < numbers.length; i++) {
 //console.log(numbers);
 // #endregion
 
+// #region iterate array with for loop
+// push(),pop(),shift(),unshift() to add or remove items at top and bottom
+// slice() https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/slice
+// The slice() method returns a shallow copy of a portion of an array into a new array object selected from start to end (end not included) where start and end represent the index of items in that array. The original array will not be modified.
+// splice() https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/splice
+// The splice() method changes the contents of an array by removing or replacing existing elements and/or adding new elements in place.
+// to clone an array
+// https://stackoverflow.com/questions/597588/how-do-you-clone-an-array-of-objects-in-javascript
+//const newArray = myArray.map(a => ({...a}));
+// #endregion
+
 // #region array destructing
 
 let input = [1, 2];
@@ -85,6 +96,9 @@ console.log(y); //2
 console.log(remaining); //[3, 4, 5, 6, 7];
 
 // #endregion
+
+// array has many useful utility methods
+//https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array
 
 // #region foreach() related
 console.log("---------------foreach() related---------------");
