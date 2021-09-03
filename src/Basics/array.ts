@@ -4,12 +4,12 @@ numbers.sort((a, b) => b - a); // order by desc
 
 // #region array use for loop to iterate
 
-for (var i = 0; i < numbers.length; i++) {
+for (let i = 0; i < numbers.length; i++) {
   //console.log(numbers[i]);
 }
 
 // change values inline
-for (var i = 0; i < numbers.length; i++) {
+for (let i = 0; i < numbers.length; i++) {
   numbers[i] = numbers[i] / 2;
 }
 //console.log(numbers);
