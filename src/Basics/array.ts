@@ -2,7 +2,8 @@ let numbers: number[] = [0, 2, 4, 6, 8, 10];
 numbers.sort((a, b) => b - a); // order by desc
 //console.log(numbers);
 
-// #region array use for loop to iterate
+// #region iterate array with for loop
+// array has length and each item has index, it's 0-indexed
 
 for (let i = 0; i < numbers.length; i++) {
   //console.log(numbers[i]);
@@ -13,6 +14,23 @@ for (let i = 0; i < numbers.length; i++) {
   numbers[i] = numbers[i] / 2;
 }
 //console.log(numbers);
+// #endregion
+
+// #region array destructing
+
+let input = [1, 2];
+let [first, second] = input;
+//console.log (first); // 1
+//console.log (second); // 2
+// swap values
+[first, second] = [second, first];
+
+let input2: number[] = [1, 2, 3];
+const [one, , three] = input2; // 1 and 3
+
+// common usage of array destructing is when a function getArray() returns an array of items with fixed index
+// instead of arr=getArray();firstName=arr[0], lastName=arr[1],...
+// use const[firstName, lastName, ...]=getArray();
 // #endregion
 
 // #region array and spread operator
