@@ -1,3 +1,4 @@
+// matrix is very useful and practical data structure
 // matrix is a 2-d array
 // n * n matrix, n=5
 let matrix1: number[][] = [
@@ -12,6 +13,7 @@ let matrix1: number[][] = [
 // console.log(matrix1.slice());
 
 // n * m matrix, n=4,m=5
+// often it is knowns as a table
 let matrix2: number[][] = [
   [0, 1, 2, 3, 4],
   [5, 6, 7, 8, 9],
