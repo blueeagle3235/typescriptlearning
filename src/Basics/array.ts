@@ -2,17 +2,50 @@ let numbers: number[] = [0, 2, 4, 6, 8, 10];
 numbers.sort((a, b) => b - a); // order by desc
 //console.log(numbers);
 
-// #region array use for loop to iterate
+// #region iterate array with for loop
+// array has length and each item has index, it's 0-indexed
 
-for (var i = 0; i < numbers.length; i++) {
+for (let i = 0; i < numbers.length; i++) {
   //console.log(numbers[i]);
 }
 
 // change values inline
-for (var i = 0; i < numbers.length; i++) {
+for (let i = 0; i < numbers.length; i++) {
   numbers[i] = numbers[i] / 2;
 }
 //console.log(numbers);
+// #endregion
+
+// #region iterate array with for loop
+// array[index] or at(index) locate item by index, index is from 0 to array.length-1
+// indexOf(item) to get the index of item in the array, first one
+// push(),pop() add or remove items at bottom / right
+// shift(),unshift() add or remove items at top / left
+// slice() https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/slice
+// The slice() method returns a shallow copy of a portion of an array into a new array object selected from start to end (end not included) where start and end represent the index of items in that array. The original array will not be modified.
+// splice() https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/splice
+// The splice() method changes the contents of an array by removing or replacing existing elements and/or adding new elements in place.
+// to clone an array
+let shallowCopy = numbers.slice(); // this is how to make a copy
+// https://stackoverflow.com/questions/597588/how-do-you-clone-an-array-of-objects-in-javascript
+//const newArray = myArray.map(a => ({...a}));
+// #endregion
+
+// #region array destructing
+
+let input = [1, 2];
+let [first, second] = input;
+//console.log (first); // 1
+//console.log (second); // 2
+// swap values
+[first, second] = [second, first];
+
+let input2: number[] = [1, 2, 3];
+const [one, , three] = input2; // 1 and 3
+
+// common usage of array destructing is when a function getArray() returns an array of items with fixed index
+// instead of arr=getArray();firstName=arr[0], lastName=arr[1],...
+// use const[firstName, lastName, ...]=getArray();
 // #endregion
 
 // #region array and spread operator
@@ -67,6 +100,9 @@ console.log(y); //2
 console.log(remaining); //[3, 4, 5, 6, 7];
 
 // #endregion
+
+// array has many useful utility methods
+//https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array
 
 // #region foreach() related
 console.log("---------------foreach() related---------------");
