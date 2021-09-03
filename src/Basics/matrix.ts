@@ -8,6 +8,9 @@ let matrix1: number[][] = [
   [20, 21, 22, 23, 24]
 ];
 
+// slice can make a shallow copy of 2-d array
+// console.log(matrix1.slice());
+
 // n * m matrix, n=4,m=5
 let matrix2: number[][] = [
   [0, 1, 2, 3, 4],
@@ -43,7 +46,7 @@ function transpose(matrix: any[][]) {
     cols = matrix[0].length;
   const newMatrix = [];
   for (let j = 0; j < cols; j++) {
-    newMatrix[j] = Array(rows);
+    newMatrix[j] = new Array(rows);
   }
   for (let i = 0; i < rows; i++) {
     for (let j = 0; j < cols; j++) {
