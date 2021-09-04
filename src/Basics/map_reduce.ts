@@ -2,9 +2,12 @@ import { users } from "./sampleData";
 
 //console.log(users);
 
+// often the case, an array of object is returned in JSON
+// map is extremely useful to reshape the data to your needs
 //console.log(users.map((u) => u.phone));
 
-// one the right side of arrow function, there must be a () to wrap the {}
+// to map to a new array of objects
+// on the right side of arrow function, there must be a () to wrap the {}
 // otherwise, JavaScript will think it is a code block
 console.log(
   users.map((u) => ({
