@@ -16,6 +16,7 @@ console.log(
   }))
 );
 
+// use object destructing in map
 //https://stackoverflow.com/questions/14810506/map-function-for-objects-instead-of-arrays
 //users.map(({ id, phone }) => console.log(id, phone));
 console.log(
