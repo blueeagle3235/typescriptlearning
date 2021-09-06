@@ -15,6 +15,8 @@
 - Type basics
 - Type advanced
 
+9-04 map, reduce, interfaces, objects
+
 ## Resources
 
 [official site](https://www.typescriptlang.org/)

@@ -1,5 +1,9 @@
 import { users } from "./sampleData";
 
+interface IUser {
+  id: number;
+  phone: string;
+}
 //console.log(users);
 
 // often the case, an array of object is returned in JSON
@@ -15,7 +19,11 @@ console.log(
     phone: u.phone
   }))
 );
-
+let idandphone:IUser[]=users.map((u)=>({
+    id:u.id,
+    phone: u.phone
+}))
+console.log(idandphone);
 // use object destructing in map
 //https://stackoverflow.com/questions/14810506/map-function-for-objects-instead-of-arrays
 //users.map(({ id, phone }) => console.log(id, phone));

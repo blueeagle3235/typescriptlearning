@@ -14,7 +14,7 @@ axios
   .get("https://jsonplaceholder.typicode.com/posts", { httpsAgent })
   .then((response: AxiosResponse<any>) => {
     // handle success
-    //console.log(response.data);
+    console.log(response.data);
   })
   .catch((error) => {
     // handle error
