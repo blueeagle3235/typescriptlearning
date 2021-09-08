@@ -25,6 +25,10 @@
 
 ### Books
 
+### Sample Code
+
+[The-TypeScript-Workshop Code](https://github.com/PacktWorkshops/The-TypeScript-Workshop)
+
 ### Tutorials
 
 <https://www.tutorialsteacher.com/typescript>
