@@ -1,5 +1,5 @@
 import sum from "./sum";
-import StringUtils from "../Samples/class/StringUtils";
+import StringUtils from "../OOP/class/StringUtils";
 import { strict as assert } from "assert";
 
 let c: number = 0;
