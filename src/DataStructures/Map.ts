@@ -28,6 +28,10 @@ for (let value of Array.from(myMap.values())) {
 for (let entry of Array.from(myMap.entries())) {
     console.log(entry);
 }
+// equivalent to the above 
+for (let entry of Array.from(myMap)) {
+    console.log(entry);
+}
 
 //4. Using object destructuring
 for (let [key, value] of Array.from(myMap)) {

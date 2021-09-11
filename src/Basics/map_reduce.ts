@@ -19,9 +19,9 @@ console.log(
     phone: u.phone
   }))
 );
-let idandphone:IUser[]=users.map((u)=>({
-    id:u.id,
-    phone: u.phone
+let idandphone: IUser[] = users.map((u) => ({
+  id: u.id,
+  phone: u.phone
 }))
 console.log(idandphone);
 // use object destructing in map
@@ -33,3 +33,5 @@ console.log(
     phone: phone
   }))
 );
+
+//https://www.c-sharpcorner.com/article/simplify-map-reduce-and-filter-in-typescript/
