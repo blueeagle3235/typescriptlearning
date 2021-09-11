@@ -2,7 +2,7 @@
   "name": "tslearn",
   "version": "1.0.0",
   "description": "learn ts",
-  "main": "index.js",
+  "exports": "./index.js",
   "scripts": {
     "test": "jest"
   },
@@ -25,6 +25,7 @@
   },
   "dependencies": {
     "axios": "^0.21.1",
-    "inquirer": "^8.1.2"
+    "inquirer": "^8.1.2",
+    "ts-node": "^10.2.1"
   }
 }
