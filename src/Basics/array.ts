@@ -9,6 +9,9 @@ for (let i = 0; i < numbers.length; i++) {
   //console.log(numbers[i]);
 }
 
+// for...of
+// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for...of
+
 // change values inline
 for (let i = 0; i < numbers.length; i++) {
   numbers[i] = numbers[i] / 2;
