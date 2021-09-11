@@ -5,25 +5,38 @@
 // https://stackoverflow.com/questions/37982476/how-to-sort-a-map-by-value-in-javascript
 import axios, { AxiosResponse } from "axios";
 
+let result = new Map<string, number>();
+function getOccurrence(text: string): Map<string, number> {
+    // clean the line breaks, punctuation marks, etc.,
+    let words: string[] = text
+        .replace(/(\r\n|\n|\r)/gm, " ")
+        .replace(/[-—]/g, " ")
+        .replace(/\s+/g, " ")
+        .replace(/[!"#$%&'()*+,-./:;<=>?@[\]^_`{|}~’“”]/g, "")
+        .split(" ");
+    let dict = new Map<string, number>();
+    words.forEach(word => {
+        let key = word.toLowerCase();
+        if (dict.has(key)) {
+            dict.set(key, (dict.get(key) || 0) + 1);
+        }
+        else {
+            dict.set(key, 1);
+        }
+    });
+    const sortedDict = new Map([...dict.entries()].sort((a, b) => b[1] - a[1]));
+    return sortedDict;
+};
+
 let url = "https://www.gutenberg.org/files/2701/2701-0.txt";
 axios(url)
     .then((response: AxiosResponse) => {
         return response.data;
     })
     .then((text: string) => {
-        let words: string[] = text
-            .replace(/(\r\n|\n|\r)/gm, " ")
-            .replace(/[-—]/g, " ")
-            .replace(/\s+/g, " ")
-            .replace(/[!"#$%&'()*+,-./:;<=>?@[\]^_`{|}~’“”]/g, "")
-            .split(" ");
-        let dict = new Map<string, number>();
-
-        words.forEach(word => {
-            let key = word.toLowerCase();
-            if (dict.has(key)) { dict.set(key, (dict.get(key) || 0) + 1); }
-            else { dict.set(key, 1); }
-        });
-        const sortedDict = new Map([...dict.entries()].sort((a, b) => b[1] - a[1]));
-        console.log(sortedDict);
+        result = getOccurrence(text);
+    })
+    .then(() => {
+        console.log(result);
     });
+
