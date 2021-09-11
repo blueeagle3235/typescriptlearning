@@ -44,6 +44,7 @@ axios
     .then((response: AxiosResponse<any>) => {
         // handle success
         //console.log(response.data);
+        
         return response.data;
         // {
         //     RouteNo: '601',
@@ -54,7 +55,20 @@ axios
         //   }
     })
     .then(data => {
-        console.log(data[0].Schedules);
+        return data[0].Schedules;
+       
+    })
+    .then(schedules => {
+        console.log(schedules);
+
+        for (let i=0; i<schedules.length;i++)
+        {
+            console.log(schedules[i].Destination);
+            if (schedules[i].Destination==='SOUTH DELTA'){
+                console.log('south delta!');
+            }
+        }
+       
     })
     .catch((error) => {
         // handle error

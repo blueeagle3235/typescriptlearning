@@ -7,6 +7,8 @@ let myMap = new Map([
 myMap.set("key1", "updated value1"); //update as key1 exists
 myMap.set("key3", "value3"); // insert as key3 not exist
 
+//has(key)
+
 //get(key)
 console.log(myMap.get("key3"));
 console.log(myMap.get("key4")); //undefined
