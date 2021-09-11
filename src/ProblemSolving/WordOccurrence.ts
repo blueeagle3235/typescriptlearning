@@ -13,9 +13,9 @@ axios(url)
     .then((text: string) => {
         let words: string[] = text
             .replace(/(\r\n|\n|\r)/gm, " ")
-            .replace(/[-|—]/g, " ")
+            .replace(/[-—]/g, " ")
             .replace(/\s+/g, " ")
-            .replace(/[.|,|?|!|’|:|;|“|”|_|(|)]/g, "")
+            .replace(/[!"#$%&'()*+,-./:;<=>?@[\]^_`{|}~’“”]/g, "")
             .split(" ");
         let dict = new Map<string, number>();
 
