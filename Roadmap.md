@@ -17,6 +17,8 @@
 
 9-04 map, reduce, interfaces, objects
 
+<https://google.github.io/styleguide/jsguide.html>
+
 ## Resources
 
 [official site](https://www.typescriptlang.org/)
