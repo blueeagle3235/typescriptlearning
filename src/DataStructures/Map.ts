@@ -1,3 +1,4 @@
+// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map
 let myMap = new Map([
     ["key1", "value1"],
     ["key2", "value2"]
