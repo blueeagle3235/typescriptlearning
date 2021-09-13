@@ -6,6 +6,10 @@
 
 // #region parameters and arguments
 
+// for type checking, type guard, etc..., see more in types
+
+// optional parameter
+
 // default values of parameters
 
 // parameters with spread syntax
