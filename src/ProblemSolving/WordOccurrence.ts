@@ -28,7 +28,7 @@ function getOccurrence(text: string): Map<string, number> {
     return sortedDict;
 };
 
-let url = "https://www.gutenberg.org/files/2701/2701-0.txt";
+let url = "https://www.gutenberg.org/files/6130/6130-0.txt";
 axios(url)
     .then((response: AxiosResponse) => {
         return response.data;
