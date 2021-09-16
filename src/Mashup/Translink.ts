@@ -19,12 +19,14 @@ let getStopsInLadner: string = `http://api.translink.ca/RTTIAPI/V1/stops?apiKey=
 //         // always executed
 //         //console.log("done");
 //     });
-
+let stops:number=55190;
+let busNum:number=601;
 // 55190 - Westbound Ladner Trunk Rd @ Hwy 17A
-let lookupStop55190 = `http://api.translink.ca/RTTIAPI/V1/stops/55190?apiKey=${APIKey}`;
+let lookupStop = `http://api.translink.ca/RTTIAPI/V1/stops/${stops}?apiKey=${APIKey}`;
+//57518 exchange, bay 7
 // 57403 - SB Arthur Dr @ 4700 Block
 // axios
-//     .get(lookupStop55190)
+//     .get(lookupStop)
 //     .then((response: AxiosResponse<any>) => {
 //         // handle success
 //         console.log(response.data);
@@ -38,7 +40,7 @@ let lookupStop55190 = `http://api.translink.ca/RTTIAPI/V1/stops/55190?apiKey=${A
 //         //console.log("done");
 //     });
 
-let getEstimatesByStopNoAndRouteNo: string = `https://api.translink.ca/rttiapi/v1/stops/55190/estimates?apikey=${APIKey}&count=3&timeframe=120&routeNo=601`
+let getEstimatesByStopNoAndRouteNo: string = `https://api.translink.ca/rttiapi/v1/stops/${stops}/estimates?apikey=${APIKey}&count=3&timeframe=120&routeNo=${busNum}`
 axios
     .get(getEstimatesByStopNoAndRouteNo)
     .then((response: AxiosResponse<any>) => {
@@ -59,13 +61,13 @@ axios
        
     })
     .then(schedules => {
-        console.log(schedules);
+        //console.log(schedules);
 
         for (let i=0; i<schedules.length;i++)
         {
-            console.log(schedules[i].Destination);
+            //console.log(schedules[i].Destination);
             if (schedules[i].Destination==='SOUTH DELTA'){
-                console.log('south delta!');
+                //console.log('south delta!');
             }
         }
        
