@@ -42,3 +42,5 @@
 <https://devdocs.io/typescript/>
 
 <https://devblogs.microsoft.com/typescript/>
+
+<https://github.com/BriceWilson>
