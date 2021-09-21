@@ -41,6 +41,16 @@ has the union, intersect, except operations
 
 ## linked nodes and list
 
+### tail
+
+### head tail and cycle
+
+## tree
+
+## graph
+
+## text
+
 ## Resources
 
 <https://practice.geeksforgeeks.org/explore/?problemType=functional&page=1>
