@@ -5,3 +5,5 @@
 // type assertion
 
 // any, unknown, never, null, undefined
+
+// type union

@@ -2,7 +2,12 @@ import axios, { AxiosResponse } from "axios";
 
 const APIKey = "XQD5MTNaqWKeTTLMwY9m";
 
-interface Stop {
+//Type aliases and interfaces are very similar, and in many cases you can choose between them freely.
+//Almost all features of an interface are available in type , the key distinction is that a type
+//cannot be re-opened to add new properties vs an interface which is always extendable
+
+//interface Stop {
+type Stop = {
   StopNo: number;
   Name: string;
   BayNo: string;
@@ -14,7 +19,7 @@ interface Stop {
   WheelchairAccess: number;
   Distance: number;
   Routes: string;
-}
+};
 
 let getStopsInLadner: string = `http://api.translink.ca/RTTIAPI/V1/stops?apiKey=${APIKey}&lat=49.090096&long=-123.081999`;
 let currentlocation: number[] = [49.084416, -123.091248]; //dummy coords
