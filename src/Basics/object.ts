@@ -15,6 +15,7 @@ let mergedObject = { ...origObjectOne, ...origObjectTwo }; //{a: 1, b: 2, c: 3, 
 // object as parameter
 
 // object destructuring
+//https://dmitripavlutin.com/javascript-object-destructuring/
 // A simple usage:
 const sandwich = {
   bread: "dutch crunch",
