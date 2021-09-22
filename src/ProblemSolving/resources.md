@@ -59,7 +59,11 @@ has the union, intersect, except operations
 
 <https://binarysearch.com/>
 
-## Open source projects
+### Books
+
+<https://github.com/PacktPublishing/Learning-JavaScript-Data-Structures-and-Algorithms-Third-Edition>
+
+### Open source projects
 
 <https://github.com/sularome/TypeScript-Algorithms-and-Data-Structures/tree/master/ts>
 
