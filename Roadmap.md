@@ -31,6 +31,10 @@
 
 [The-TypeScript-Workshop Code](https://github.com/PacktWorkshops/The-TypeScript-Workshop)
 
+### Experts
+
+<https://github.com/DanWahlin/TypeScriptDemos>
+
 ### Tutorials
 
 <https://www.tutorialsteacher.com/typescript>
