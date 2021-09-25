@@ -2,7 +2,7 @@
 
 ## common
 
-### devide and conque
+### divide and conquer
 
 8 gold coins, one is a counterfeit coin with different weight, one scale, how many times you need use the
 
