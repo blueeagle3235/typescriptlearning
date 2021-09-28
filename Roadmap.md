@@ -37,6 +37,8 @@
 
 <https://github.com/johnpapa/typescript-async>
 
+<https://github.com/danielstern>
+
 ### Tutorials
 
 <https://www.tutorialsteacher.com/typescript>
