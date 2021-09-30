@@ -27,6 +27,11 @@
 // #region callback functions
 // callback functions as parameters
 // https://developer.mozilla.org/en-US/docs/Glossary/Callback_function
+// -- deferred operation use a function parameter
+// -- passing predict, search criteria, actions
+// -- typed/interface callback, ICompare, IEqual, ...
+// -- pub/sub pattern
+// -- nested callback before promise and async
 
 function greeting(name: string) {
   console.log("Hello " + name);

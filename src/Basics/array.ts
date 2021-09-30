@@ -28,8 +28,13 @@ for (let i = 0; i < numbers.length; i++) {
 // The slice() method returns a shallow copy of a portion of an array into a new array object selected from start to end (end not included) where start and end represent the index of items in that array. The original array will not be modified.
 // splice() https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/splice
 // The splice() method changes the contents of an array by removing or replacing existing elements and/or adding new elements in place.
+
 // to clone an array
+console.log("----------------clone an array--------------");
 let shallowCopy = numbers.slice(); // this is how to make a copy
+console.log(shallowCopy);
+// use the spread syntax
+console.log([...numbers]);
 // https://stackoverflow.com/questions/597588/how-do-you-clone-an-array-of-objects-in-javascript
 //const newArray = myArray.map(a => ({...a}));
 // #endregion
