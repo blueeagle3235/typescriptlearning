@@ -53,11 +53,17 @@ has the union, intersect, except operations
 
 ## Resources
 
+### Problems
+
 <https://practice.geeksforgeeks.org/explore/?problemType=functional&page=1>
 
 <https://leetcode.com/problemset/all/>
 
 <https://binarysearch.com/>
+
+<https://www.topcoder.com/thrive>
+
+<https://www.hackerrank.com/>
 
 ### Books
 
