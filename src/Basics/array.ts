@@ -1,25 +1,27 @@
-let numbers: number[] = [0, 2, 4, 6, 8, 10];
-numbers.sort((a, b) => b - a); // order by desc
-//console.log(numbers);
+let numbers: number[] = [1, 0, 7, 2, 3, 4, 9, 6, 5, 8, 10];
 
 // #region iterate array with for loop
-// array has length and each item has index, it's 0-indexed
-
+// array has length and each item has index,
+// it's 0-indexed, iteration from 0 to length-1
+// for (let i = 0; i <= numbers.length-1; i++) {...}
 for (let i = 0; i < numbers.length; i++) {
   //console.log(numbers[i]);
 }
 
 // for...of
 // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for...of
+for (const n of numbers) {
+  console.log(n);
+}
 
-// change values inline
+// change values inline / in-place
 for (let i = 0; i < numbers.length; i++) {
   numbers[i] = numbers[i] / 2;
 }
 //console.log(numbers);
 // #endregion
 
-// #region iterate array with for loop
+// #region items in array
 // array[index] or at(index) locate item by index, index is from 0 to array.length-1
 // indexOf(item) to get the index of item in the array, first one
 // push(),pop() add or remove items at bottom / right
@@ -37,6 +39,13 @@ console.log(shallowCopy);
 console.log([...numbers]);
 // https://stackoverflow.com/questions/597588/how-do-you-clone-an-array-of-objects-in-javascript
 //const newArray = myArray.map(a => ({...a}));
+// #endregion
+
+// #region array sort and reverse
+numbers.sort((a, b) => a - b); // order by asc
+numbers.sort((a, b) => b - a); // order by desc
+// if it's an array of objects, then obj.prop can be used in the condition
+//console.log(numbers);
 // #endregion
 
 // #region array destructing
