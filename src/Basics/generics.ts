@@ -1,3 +1,5 @@
+//https://www.typescriptlang.org/docs/handbook/2/generics.html
+
 class ListNode<T> {
   val: T | null;
   next: ListNode<T> | null;
