@@ -1,17 +1,17 @@
 //https://www.typescriptlang.org/docs/handbook/2/generics.html
 
-class ListNode<T> {
+class MyListNode<T> {
   val: T | null;
-  next: ListNode<T> | null;
-  constructor(val?: T | null, next?: ListNode<T> | null) {
+  next: MyListNode<T> | null;
+  constructor(val?: T | null, next?: MyListNode<T> | null) {
     this.val = val === undefined ? null : val;
     this.next = next === undefined ? null : next;
   }
 }
 
 function iterateListNode() {
-  let secondLN: ListNode<number> = new ListNode<number>(2);
-  let firstLN: ListNode<number> = new ListNode<number>(1, secondLN);
+  let secondLN: MyListNode<number> = new MyListNode<number>(2);
+  let firstLN: MyListNode<number> = new MyListNode<number>(1, secondLN);
   // start current from the first
   let current = firstLN;
   while (current.next !== null) {
