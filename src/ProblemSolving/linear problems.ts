@@ -42,3 +42,6 @@ function getMax2(array: any) {
 }
 console.log(getMax2(array));
 // 4 6
+
+// sliding window is often to solve sub-array problems
+//<https://redquark.org/cotd/sliding_window/>
