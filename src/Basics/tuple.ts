@@ -9,3 +9,17 @@ hats.forEach((hat) => {
 });
 
 // ofter the case, tuple is handy to return multiple values
+type MyInterval = [number, number];
+
+function MyIntervalTest() {
+  let myInterval1: MyInterval = [1, 2];
+  let myInterval2: MyInterval = [2, 3];
+
+  let intervals: MyInterval[] = [myInterval1, myInterval2];
+
+  for (const interval of intervals) {
+    let [start, end] = interval;
+    console.log(`${start} - ${end}`);
+  }
+}
+MyIntervalTest();
