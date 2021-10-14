@@ -8,7 +8,8 @@ hats.forEach((hat) => {
   console.log(hatName, hatPrice);
 });
 
-// ofter the case, tuple is handy to return multiple values
+// ofter the case, tuple is handy to handle dataset like data, multiple records with the same order
+// it's more lightwight than class
 type MyInterval = [number, number];
 
 function MyIntervalTest() {
