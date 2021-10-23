@@ -76,3 +76,7 @@ has the union, intersect, except operations
 <https://github.com/larrybotha/building-algorithms-using-typescript/tree/master/src>
 
 <https://github.com/AvraamMavridis/Algorithms-Data-Structures-in-Typescript>
+
+## others
+
+<https://codeincomplete.com/articles/javascript-breakout/>
