@@ -25,6 +25,7 @@
   },
   "dependencies": {
     "axios": "^0.21.1",
+    "excalibur": "^0.25.1",
     "inquirer": "^8.1.2",
     "ts-node": "^10.2.1"
   }
