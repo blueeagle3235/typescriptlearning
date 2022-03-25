@@ -54,3 +54,5 @@
 <https://devblogs.microsoft.com/typescript/>
 
 <https://github.com/BriceWilson>
+
+<https://github.dev/givemepower8/notes>
