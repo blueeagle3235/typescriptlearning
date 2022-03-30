@@ -96,18 +96,18 @@ let mergedArray = [...origArrayOne, ...origArrayTwo]; //1,2,3,4,5,6
 foo(...mergedArray); //[ 1, 2, 3, 4, 5, 6 ]
 
 // recursion with rest parameter
-function sum(...array: number[]): number {
+function Sum(...array: number[]): number {
   if (array.length === 0) return 0;
   //console.log(array.length);
   let [head, ...rest] = array;
   //console.log(head);
   //console.log(rest);
-  return head + sum(...rest);
+  return head + Sum(...rest);
 }
-let result1 = sum(1, 2, 3, 4, 5);
+let result1 = Sum(1, 2, 3, 4, 5);
 let mynumbers = [1, 2, 3, 4, 5];
 // use the ...operator in arguments so to convert the array to rest argument
-let result2 = sum(...mynumbers);
+let result2 = Sum(...mynumbers);
 console.log(result1);
 console.log(result2);
 
