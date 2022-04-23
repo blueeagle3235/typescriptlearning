@@ -25,7 +25,7 @@ After mastering the language, you need a tool (VS code) to:
 
 - Application
   - web
-  - cloud 
+  - cloud
   - desktop
     - windows/mac/linux
   - mobile
@@ -43,7 +43,7 @@ After mastering the language, you need a tool (VS code) to:
 - Run
   - Code Runner extension
   - node / ts-node
-  - html after webpack, parcel 
+  - html after webpack, parcel
 - Debug
   - in VS code
   - in Chrome
