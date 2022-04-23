@@ -19,6 +19,42 @@
 
 <https://google.github.io/styleguide/jsguide.html>
 
+## DevOps Process
+
+After mastering the language, you need a tool (VS code) to:
+
+- Application
+  - web
+  - cloud 
+  - desktop
+    - windows/mac/linux
+  - mobile
+    - android/ios
+  - game
+- code repo
+  - git
+- Write code in .ts
+  - intelli-sense  
+- Compile to .js
+  - tsc
+  - [tsconfig.json](https://www.typescriptlang.org/docs/handbook/tsconfig-json.html)
+  - [compiler options](https://www.typescriptlang.org/docs/handbook/compiler-options.html)
+  - babel to other js versions
+- Run
+  - Code Runner extension
+  - node / ts-node
+  - html after webpack, parcel 
+- Debug
+  - in VS code
+  - in Chrome
+  - source map
+- Package
+- Test
+- Ship it!
+- More features & bug fixes
+
+## 3rd party libraries
+
 ## Resources
 
 [official site](https://www.typescriptlang.org/)
