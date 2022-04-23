@@ -6,6 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
   </head>
-  <body></body>
+  <body>
+    <canvas id="canvas" width="490" height="490"
+            style="border: 1px solid black;">
+    </canvas>
+    <br>
+    <button id="clear">clear</button>
+    <script type="module" src="DrawingApp.ts"></script>
+    <script>
+      new DrawingApp();
+    </script>
+  </body>
 </html>
+<!-- yarn parcel src/Canvas/index.html -->
 <!-- https://kernhanda.github.io/tutorial-typescript-canvas-drawing/ -->

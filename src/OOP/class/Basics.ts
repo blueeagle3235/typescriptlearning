@@ -69,3 +69,5 @@ let jsBook = new ITBook(
 console.log(jsBook.Title);
 jsBook.PrintIsbn();
 jsBook.PrintTechnology();
+
+// https://www.typescriptlang.org/docs/handbook/classes.html
