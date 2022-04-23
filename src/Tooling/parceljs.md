@@ -6,7 +6,7 @@
 
 ## run
 
-`yarn parcel src/index.html` or `npx parcel src/index.html`
+`yarn parcel src/html/index.html` or `npx parcel src/html/index.html`
 
 ### watch
 
