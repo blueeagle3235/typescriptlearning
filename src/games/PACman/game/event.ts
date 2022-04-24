@@ -9,6 +9,7 @@ enum Keys {
 	Right = 39,
 	Space = " ".charCodeAt(0)
 }
+
 function getMovement(key: number) {
 	switch (key) {
 		case Keys.Top:
@@ -67,6 +68,7 @@ function eventHandlerMenu(state: State, event: KeyEvent) {
 	}
 	return state;
 }
+
 function eventHandlerPlaying(state: State, event: KeyEvent) {
 	if (event instanceof KeyEvent) {
 		const inputMovement = getMovement(event.keyCode);

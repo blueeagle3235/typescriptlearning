@@ -156,6 +156,7 @@ export const menuMain: Menu = {
 	],
 	selected: 0
 }
+
 export const menuWon: Menu = {
 	title: "You won!",
 	options: [
@@ -163,6 +164,7 @@ export const menuWon: Menu = {
 	],
 	selected: 0
 }
+
 export const menuLost: Menu = {
 	title: "Game over!",
 	options: [

@@ -30,6 +30,7 @@ export function game<UState>(
 			drawAnimationFrame = requestAnimationFrame(draw);
 		}
 	}
+    
 	function draw() {
 		drawAnimationFrame = -1;
 		const { width, height } = canvas;

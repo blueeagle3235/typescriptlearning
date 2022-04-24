@@ -9,6 +9,7 @@ export function draw(state: State, width: number, height: number) {
 		drawMenu(state.menu, width, height)
 	]);
 }
+
 function drawLevel(level: Level, width: number, height: number) {
 	const scale = Math.min(width / (level.width + 1), height / (level.height + 1));
 	return new Scale(scale, scale,
@@ -29,6 +30,7 @@ function drawLevel(level: Level, width: number, height: number) {
 		return new Pictures(items.map(drawObject(callback)));
 	}
 }
+
 function drawMenu(menu: Menu | undefined, width: number, height: number): Picture {
 	if (menu === undefined) return new Empty();
 	const selected = menu.selected;
@@ -50,9 +52,11 @@ function drawMenu(menu: Menu | undefined, width: number, height: number): Pictur
 		]));
 	}
 }
+
 function drawWall() {
 	return new Color("#111", new Rectangle(0, 0, 1, 1));
 }
+
 const leftTop: [number, number] = [-0.5, 0.5];
 const leftBottom: [number, number] = [-0.5, -0.5];
 const rightTop: [number, number] = [0.5, 0.5];
@@ -63,18 +67,22 @@ const wallLines: [Side, Line][] = [
 	[Side.Top, new Line([leftTop, rightTop], 0.1)],
 	[Side.Bottom, new Line([leftBottom, rightBottom], 0.1)]
 ];
+
 function drawWallLines({ neighbours }: Wall) {
 	const lines = wallLines
 		.filter(([side]) => (side & neighbours) === 0)
 		.map(([side, line]) => line);
 	return new Color("#0021b3", new Pictures(lines));
 }
+
 function drawDot() {
 	return new Color("#f0c0a8", new Circle(0, 0, 0.2, 0.2));
 }
+
 function drawPlayer() {
 	return new Color("#ffff00", new Circle(0, 0, 0.8, 0.8));
 }
+
 function drawEnemy() {
 	const shape = new Color("#ff0000", new Pictures([
 		new Circle(0, 0.15, 0.6),
