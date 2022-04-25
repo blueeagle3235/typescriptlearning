@@ -69,6 +69,8 @@ After mastering the language, you need a tool (VS code) to:
 
 [The-TypeScript-Workshop Code](https://github.com/PacktWorkshops/The-TypeScript-Workshop)
 
+<https://github.com/pagalvin/tsbook>
+
 ### Experts
 
 <https://github.com/DanWahlin/TypeScriptDemos>
