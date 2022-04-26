@@ -127,11 +127,11 @@ export class Vector2 {
 			if (!this.showTurtle) return;
 			this.restore();
 			this.crc.beginPath();
-			let v2 = this.convertToRotation(new Vector2(-20, 0));
+			let v2 = this.convertToRotation(new Vector2(-10, 0));
 			this.crc.moveTo(this.x + v2.x, this.y + v2.y);
-			v2 = this.convertToRotation(new Vector2(0, -20));
+			v2 = this.convertToRotation(new Vector2(0, -10));
 			this.crc.lineTo(this.x + v2.x, this.y + v2.y);
-			v2 = this.convertToRotation(new Vector2(20, 0));
+			v2 = this.convertToRotation(new Vector2(10, 0));
 			this.crc.lineTo(this.x + v2.x, this.y + v2.y);
 			this.crc.closePath();
 			this.crc.fillStyle = "#fff";
@@ -260,18 +260,18 @@ export class Vector2 {
 			this.drawTurtle();
 		}
 
-		rotateClockwise(degree: number) {
+		turnRight(degree: number) {
 			if (!this.executing) {
-				this.actions.push({ action: this.rotateClockwise.bind(this), param: degree });
+				this.actions.push({ action: this.turnRight.bind(this), param: degree });
 				return;
 			}
 			this.rotation += this.degreeToRadian(degree);
 			this.drawTurtle();
 		}
 
-		rotateCounterClockwise(degree: number) {
+		turnLeft(degree: number) {
 			if (!this.executing) {
-				this.actions.push({ action: this.rotateCounterClockwise.bind(this), param: degree });
+				this.actions.push({ action: this.turnLeft.bind(this), param: degree });
 				return;
 			}
 			this.rotation -= this.degreeToRadian(degree);
