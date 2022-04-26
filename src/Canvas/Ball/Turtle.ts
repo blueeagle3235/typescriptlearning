@@ -52,7 +52,9 @@ export class Vector2 {
 		private savedPosition: Vector2;
 		private savedRotation: number;
 
-		constructor(context: CanvasRenderingContext2D, x: number = 0, y: number = 0, rotation: number = 0, penDown: boolean = true, penColor: string = "#000000") {
+		constructor(x: number = 0, y: number = 0, rotation: number = 0, penDown: boolean = true, penColor: string = "#000000") {
+			let canvas = document.getElementById('canvas') as HTMLCanvasElement;
+			let context = canvas.getContext("2d") as CanvasRenderingContext2D;
 			this.crc = context;
 			this.imgData = this.crc.getImageData(0, 0, this.crc.canvas.width, this.crc.canvas.height);
 			this.x = x;

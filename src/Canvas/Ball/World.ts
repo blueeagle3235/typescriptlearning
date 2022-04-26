@@ -15,3 +15,34 @@ import { Turtle } from "./Turtle"
 //         ball.draw();
 //     }
 // }
+
+let turtle = new Turtle( 250, 250);
+turtle.setPen(true);
+turtle.savePos();
+turtle.setWidth(20);
+for (let i = 0; i < 36; i++) {
+    turtle.setColor("hsl(" + 10 * i + ", 100%, 50%)");
+    turtle.restorePos();
+    turtle.rotateClockwise(10);
+    turtle.savePos();
+    for (let k = 0; k < 36; k++) {
+        turtle.moveForward(5);
+        turtle.rotateClockwise(3);
+    }
+}
+// turtle.rotateClockwise(90);
+// for (let i = 0; i < 50; i++) {
+//     turtle.moveForward(i);
+//     turtle.rotateClockwise(50 - i);
+// }
+// turtle.moveForward(50);
+// turtle.rotateClockwise(90);
+// turtle.moveForward(100);
+// turtle.rotateClockwise(90);
+// turtle.moveForward(150);
+// turtle.rotateClockwise(90);
+// turtle.moveForward(200);
+// turtle.rotateClockwise(90);
+// turtle.moveForward(250);
+
+turtle.runAll();
