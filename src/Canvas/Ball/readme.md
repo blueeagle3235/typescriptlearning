@@ -28,7 +28,11 @@
 
 <https://codepen.io/TheCodeDepository/pen/jKBaoN>
 
-## Camara
+## Image
+
+<https://codepen.io/pimskie/pen/KKZYaOJ>
+
+## Camera
 
 <https://codepen.io/mediapipe/pen/RwGWYJw>
 
