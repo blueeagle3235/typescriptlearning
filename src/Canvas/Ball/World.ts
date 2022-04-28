@@ -1,23 +1,25 @@
 import { Ball } from "./Ball"
 import { Turtle } from "./Turtle"
 
-// let ball1 = new Ball(35, 35);
+// let ball1 = new Ball(35, 35, "1");
 // ball1.draw();
 
-// let ball2 = new Ball(350, 35);
+// let ball2 = new Ball(350, 35,"2");
 // ball2.draw();
 
-// for (let i=25;i<=500;i+=50)
-// {
-//     for (let j=25;j<=500;j+=50)
-//     {
-//         let ball = new Ball(i, j);
-//         ball.draw();
-//     }
-// }
+for (let i=25;i<=500;i+=50)
+{
+    for (let j=25;j<=500;j+=50)
+    {
+        let x=(i-25)/50;
+        let y=(j-25)/50;
+        let ball = new Ball(i, j, `${x},${y}`);
+        ball.draw();
+    }
+}
 
-let turtle = new Turtle( 250, 250);
-turtle.setPen(true);
+// let turtle = new Turtle( 250, 250);
+// turtle.setPen(true);
 // turtle.savePos();
 // turtle.setWidth(20);
 // for (let i = 0; i < 36; i++) {
@@ -31,10 +33,7 @@ turtle.setPen(true);
 //     }
 // }
 
-for (let i = 0; i < 200; i++) {
-    turtle.moveForward(i*2);
-    turtle.turnRight(90);
-}
+
 
 // turtle.turnRight(90);
 // turtle.moveForward(50);
@@ -47,5 +46,10 @@ for (let i = 0; i < 200; i++) {
 // turtle.turnRight(90);
 // turtle.moveForward(250);
 // turtle.turnRight(90);
+
+// for (let i = 0; i < 200; i++) {
+//     turtle.moveForward(i*2);
+//     turtle.turnRight(90);
+// }
 
 turtle.runAll();
