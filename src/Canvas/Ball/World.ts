@@ -18,8 +18,8 @@ for (let i=25;i<=500;i+=50)
     }
 }
 
-// let turtle = new Turtle( 250, 250);
-// turtle.setPen(true);
+let turtle = new Turtle( 250, 250);
+turtle.setPen(true);
 // turtle.savePos();
 // turtle.setWidth(20);
 // for (let i = 0; i < 36; i++) {
