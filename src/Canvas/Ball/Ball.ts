@@ -1,5 +1,3 @@
-import { VoidExpression } from "typescript";
-
 export class Ball {
 
     private context: CanvasRenderingContext2D;
@@ -38,7 +36,6 @@ export class Ball {
 
     public move(): void {
         this.stepInterval = window.setInterval(() => this.onEachStep(), 1000 / 60); // 60 fps
-
     }
 
     public stop(): void {
@@ -56,5 +53,4 @@ export class Ball {
         this.y += this.dy;
         this.draw();
     }
-
 };
