@@ -24,7 +24,7 @@ export class Ball {
     }
 
     public draw(): void {
-        //this.context.clearRect(0, 0, this.canvas.width, this.canvas.height);
+        this.context.clearRect(0, 0, this.canvas.width, this.canvas.height);
         this.context.beginPath();
         this.context.arc(this.x, this.y, this.radius, 0, Math.PI * 2, true);
         this.context.closePath();
