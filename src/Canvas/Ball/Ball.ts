@@ -12,8 +12,8 @@ export class Ball {
 
     private stepInterval: number = 0;
 
-    private dx: number = Math.random()*2;
-    private dy: number = Math.random()*2;
+    private dx: number = Math.floor(Math.random() * 10);;
+    private dy: number = Math.floor(Math.random() * 10);;
 
     constructor(x: number, y: number, label: string = "") {
         this.canvas = document.getElementById('canvas') as HTMLCanvasElement;
@@ -42,12 +42,18 @@ export class Ball {
     public stop(): void {
         window.clearInterval(this.stepInterval); // 60 fps
     }
-public greet (a:string):void{
-    console.log("hello "+a);
-}
 
+    public greet (name:string):void{
+        console.log("hello "+name);
+    }
+
+    private getRndInteger(min:number, max:number):number {
+        return Math.floor(Math.random() * (max - min) ) + min;
+      }
 
     private onEachStep(): void {
+        this.dx = this.getRndInteger(-20,20);
+        this.dy = this.getRndInteger(-20,20);
         this.context.fillStyle = RandomColor();
         if (this.x + this.dx > this.canvas.width - this.radius || this.x + this.dx < this.radius) {
             this.dx = -this.dx;
