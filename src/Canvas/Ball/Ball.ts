@@ -1,3 +1,4 @@
+import {RandomRange,RandomColor} from "./Turtle"
 export class Ball {
 
     private context: CanvasRenderingContext2D;
@@ -6,13 +7,13 @@ export class Ball {
     public x: number = 0;
     public y: number = 0;
     public radius: number = 25;
-    private color: string = 'orange';
+    private color: string = 'red';
     public label: string = "";
 
     private stepInterval: number = 0;
 
-    private dx: number = 2;
-    private dy: number = 1;
+    private dx: number = Math.random()*2;
+    private dy: number = Math.random()*2;
 
     constructor(x: number, y: number, label: string = "") {
         this.canvas = document.getElementById('canvas') as HTMLCanvasElement;
@@ -24,11 +25,11 @@ export class Ball {
     }
 
     public draw(): void {
-        this.context.clearRect(0, 0, this.canvas.width, this.canvas.height);
+        //this.context.clearRect(0, 0, this.canvas.width, this.canvas.height);
         this.context.beginPath();
         this.context.arc(this.x, this.y, this.radius, 0, Math.PI * 2, true);
         this.context.closePath();
-        this.context.fillStyle = this.color;
+        this.context.fillStyle = RandomColor();
         this.context.fill();
         this.context.font = "12pt Arial";
         this.context.strokeText(this.label, this.x - 5, this.y + 5);
@@ -41,8 +42,13 @@ export class Ball {
     public stop(): void {
         window.clearInterval(this.stepInterval); // 60 fps
     }
+public greet (a:string):void{
+    console.log("hello "+a);
+}
+
 
     private onEachStep(): void {
+        this.context.fillStyle = RandomColor();
         if (this.x + this.dx > this.canvas.width - this.radius || this.x + this.dx < this.radius) {
             this.dx = -this.dx;
         }

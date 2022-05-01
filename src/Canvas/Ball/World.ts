@@ -1,6 +1,12 @@
 import { Ball } from "./Ball"
 import { Turtle } from "./Turtle"
 
+let ball = new Ball(62, 47, "R");
+let ball2 = new Ball(348, 295, "L");
+ball.draw();
+ball.move();
+ball2.draw();
+ball2.move();
 // let ball1 = new Ball(35, 35, "3");
 // ball1.draw();
 // ball1.move();
@@ -17,8 +23,8 @@ import { Turtle } from "./Turtle"
 //     }
 // }
 
-let turtle = new Turtle( 250, 250);
-turtle.setPen(true);
+// let turtle = new Turtle( 250, 250);
+// turtle.setPen(true);
 // turtle.savePos();
 // turtle.setWidth(20);
 // for (let i = 0; i < 36; i++) {
@@ -45,21 +51,21 @@ turtle.setPen(true);
 // turtle.turnRight(90);
 // turtle.moveForward(250);
 // turtle.turnRight(90);
-function drawByRadian(radian:number):void{
-    for (let i = 0; i < 200; i++) {
-        turtle.moveForward(i*2);
-        turtle.turnRight(radian);
-    }
+// function drawByRadian(radian:number):void{
+//     for (let i = 0; i < 200; i++) {
+//         turtle.moveForward(i*2);
+//         turtle.turnRight(radian);
+//     }
 
-    turtle.runAll();
-}
+//     turtle.runAll();
+// }
 
-for(let i = 0; i <= 360; i++) {
-    window.setTimeout(()=>{
-       console.log(i);
-       turtle.resetCanvas();
-       turtle.reset();
-       drawByRadian(i);
+// for(let i = 0; i <= 360; i++) {
+//     window.setTimeout(()=>{
+//        console.log(i);
+//        turtle.resetCanvas();
+//        turtle.reset();
+//        drawByRadian(i);
        
-    },i*100);
- }
+//     },i*100);
+//  }
