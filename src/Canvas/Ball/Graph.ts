@@ -156,7 +156,7 @@ export class Graph {
 	};		
 		
 	// PLOT DATA: plot data
-	public plot (xArr:Array<number>, yArr:Array<number>, pColor:string, pDots:boolean, pLine:boolean):void{
+	public plot (xArr:Array<number>, yArr:Array<number>, pColor:string="red", pDots:boolean=true, pLine:boolean=true):void{
 		// the last three arguments have default values
 		if(typeof(pColor)==='undefined') pColor = '#0000ff';
 		if(typeof(pDots)==='undefined') pDots = true;
@@ -185,6 +185,45 @@ export class Graph {
 
 }
 
+for (let i=0; i<=20; i++){
+    console.log("Hi " + i);
+}
 let graph  = new Graph(-10,10,-10,10,350,350,600,600);			
-graph.drawgrid(1,1,1,1);			
+graph.drawgrid(1,0.2,1,0.2);			
 graph.drawaxes('x','y');
+
+let xvals = new Array<number>();
+let yvals = new Array<number>();
+
+// xvals[0]=1;
+// yvals[0]=1;
+// xvals[1]=3;
+// yvals[1]=5;
+// xvals[2]=2;
+// yvals[2]=7;
+// xvals[3]=1;
+// yvals[3]=1;
+let angle=-1;
+for(let x=-10;x<=10;x=x+0.2){
+    xvals.push(x);
+    // y=angle*x+1;
+    //let y = x * x * x + x * x + x;
+    // y = Math.abs(x);
+    //y = Math.sin(x);
+    y = Math.sqrt(100-x*x);
+    yvals.push(y);
+}
+
+graph.plot(xvals, yvals, "#ff0000", false, true);
+for(let x=-10;x<=10;x=x+0.2){
+    xvals.push(x);
+    // y=angle*x+1;
+    //let y = x * x * x + x * x + x;
+    // y = Math.abs(x);
+    //y = Math.sin(x);
+    y = Math.sqrt(100-x*x);
+    yvals.push(-y);
+}
+
+graph.plot(xvals, yvals, "#ff0000", false, true);
+//graph.plot(xvals, yvals);
