@@ -7,3 +7,4 @@ public sum (number1:number, number2:number):number{
 let calculator = new Calculator();
 let result =calculator.sum(1, 1);
 console.log(result)
+
