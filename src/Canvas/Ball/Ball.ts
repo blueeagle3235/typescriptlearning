@@ -1,4 +1,4 @@
-import { RandomRange, RandomColor } from "./Util"
+import { RandomRange, RandomColor } from "../../Robin/Util"
 export class Ball {
 
     private context: CanvasRenderingContext2D;
