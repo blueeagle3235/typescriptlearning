@@ -1,4 +1,4 @@
-import {RandomRange,RandomColor} from "./Turtle"
+import { RandomRange, RandomColor } from "./Util"
 export class Ball {
 
     private context: CanvasRenderingContext2D;
@@ -43,17 +43,17 @@ export class Ball {
         window.clearInterval(this.stepInterval); // 60 fps
     }
 
-    public greet (name:string):void{
-        console.log("hello "+name);
+    public greet(name: string): void {
+        console.log("hello " + name);
     }
 
-    private getRndInteger(min:number, max:number):number {
-        return Math.floor(Math.random() * (max - min) ) + min;
-      }
+    private getRndInteger(min: number, max: number): number {
+        return Math.floor(Math.random() * (max - min)) + min;
+    }
 
     private onEachStep(): void {
-        this.dx = this.getRndInteger(-20,20);
-        this.dy = this.getRndInteger(-20,20);
+        this.dx = this.getRndInteger(-20, 20);
+        this.dy = this.getRndInteger(-20, 20);
         this.context.fillStyle = RandomColor();
         if (this.x + this.dx > this.canvas.width - this.radius || this.x + this.dx < this.radius) {
             this.dx = -this.dx;
