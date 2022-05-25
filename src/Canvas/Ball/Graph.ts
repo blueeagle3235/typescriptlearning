@@ -1,3 +1,13 @@
+export class Vector {
+	public x: number = 0;
+	public y: number = 0;
+
+	constructor(x: number, y: number) {
+		this.x = x;
+		this.y = y;
+	}
+}
+
 export class Graph {
 
 	private context: CanvasRenderingContext2D;
@@ -73,7 +83,6 @@ export class Graph {
 		this.context.fill();
 	}
 
-	// DRAW GRID: draw major, minor lines and display values
 	public drawgrid(xmajor: number, xminor: number, ymajor: number, yminor: number): void {
 		this.x_tick_major = xmajor / this.x_displ_scal;
 		this.x_tick_minor = xminor / this.x_displ_scal;
@@ -134,7 +143,6 @@ export class Graph {
 		} while (this.xx <= this.x_max);
 	};
 
-	// DRAW AXES: draw axes and labels		
 	public drawaxes(xlabel: string, ylabel: string): void {
 		if (typeof (xlabel) === 'undefined') xlabel = 'x';
 		if (typeof (ylabel) === 'undefined') ylabel = 'y';
@@ -155,20 +163,15 @@ export class Graph {
 		this.context.fillText(ylabel, this.txpos + this.tw / 2 + 5, this.y_max - 1.5 * this.th);
 	};
 
-	// PLOT DATA: plot data
 	public plot(xArr: Array<number>, yArr: Array<number>, pColor: string = "red", pDots: boolean = true, pLine: boolean = true): void {
-		// the last three arguments have default values
-		if (typeof (pColor) === 'undefined') pColor = '#0000ff';
-		if (typeof (pDots) === 'undefined') pDots = true;
-		if (typeof (pLine) === 'undefined') pLine = true;
-		var xpos = this.x_orig + xArr[0] / this.x_displ_scal;
-		var ypos = this.y_orig - yArr[0] / this.y_displ_scal;
+		let xpos = this.x_orig + xArr[0] / this.x_displ_scal;
+		let ypos = this.y_orig - yArr[0] / this.y_displ_scal;
 		this.context.strokeStyle = pColor;
 		this.context.lineWidth = 1;
 		this.context.beginPath();
 		this.context.moveTo(xpos, ypos);
 		this.context.arc(xpos, ypos, 1, 0, 2 * Math.PI, true);
-		for (var i = 1; i < xArr.length; i++) {
+		for (let i = 1; i < xArr.length; i++) {
 			xpos = this.x_orig + xArr[i] / this.x_displ_scal;
 			ypos = this.y_orig - yArr[i] / this.y_displ_scal;
 			if (pLine) {
@@ -183,47 +186,86 @@ export class Graph {
 		this.context.stroke();
 	};
 
+	public plotVector(vectors: Array<Vector>, pColor: string = "red", pDots: boolean = true, pLine: boolean = true): void {
+		if (vectors.length === 0) return;
+
+		let xpos = this.x_orig + vectors[0].x / this.x_displ_scal;
+		let ypos = this.y_orig - vectors[0].y / this.y_displ_scal;
+		this.context.strokeStyle = pColor;
+		this.context.lineWidth = 1;
+		this.context.beginPath();
+		this.context.moveTo(xpos, ypos);
+		this.context.arc(xpos, ypos, 1, 0, 2 * Math.PI, true);
+		for (let i = 1; i < vectors.length; i++) {
+			xpos = this.x_orig + vectors[i].x / this.x_displ_scal;
+			ypos = this.y_orig - vectors[i].y / this.y_displ_scal;
+			if (pLine) {
+				this.context.lineTo(xpos, ypos);
+			} else {
+				this.context.moveTo(xpos, ypos);
+			}
+			if (pDots) {
+				this.context.arc(xpos, ypos, 1, 0, 2 * Math.PI, true);
+			}
+		}
+		this.context.stroke();
+	};
+
 }
 
-for (let i = 0; i <= 20; i++) {
-	console.log("Hi " + i);
-}
+// for (let i = 0; i <= 20; i++) {
+// 	console.log("Hi " + i);
+// }
 let graph = new Graph(-10, 10, -10, 10, 350, 350, 600, 600);
 graph.drawgrid(1, 0.2, 1, 0.2);
 graph.drawaxes('x', 'y');
 
-let xvals = new Array<number>();
-let yvals = new Array<number>();
+let vs = new Array<Vector>();
+// let v1 = new Vector(1, 1);
+// let v2 = new Vector(2, 2);
+// let v3 = new Vector(3, 1);
+// vs.push(v1);
+// vs.push(v2);
+// vs.push(v3);
+// for (let i = 1; i <= 9; i++) {
+// 	for (let j = 1; j <= 9; j++) {
+// 		vs.push(new Vector(10 - j, 10 - i));
+// 	}
+// }
+graph.plotVector(vs, "#ff0000", true, true);
 
-// xvals[0]=1;
-// yvals[0]=1;
-// xvals[1]=3;
-// yvals[1]=5;
-// xvals[2]=2;
-// yvals[2]=7;
-// xvals[3]=1;
-// yvals[3]=1;
-let angle = -1;
-for (let x = -10; x <= 10; x = x + 0.2) {
-	xvals.push(x);
-	// y=angle*x+1;
-	//let y = x * x * x + x * x + x;
-	// y = Math.abs(x);
-	//y = Math.sin(x);
-	y = Math.sqrt(100 - x * x);
-	yvals.push(y);
-}
+// let xvals = new Array<number>();
+// let yvals = new Array<number>();
 
-graph.plot(xvals, yvals, "#ff0000", false, true);
-for (let x = -10; x <= 10; x = x + 0.2) {
-	xvals.push(x);
-	// y=angle*x+1;
-	//let y = x * x * x + x * x + x;
-	// y = Math.abs(x);
-	//y = Math.sin(x);
-	y = Math.sqrt(100 - x * x);
-	yvals.push(-y);
-}
+// // xvals[0]=1;
+// // yvals[0]=1;
+// // xvals[1]=3;
+// // yvals[1]=5;
+// // xvals[2]=2;
+// // yvals[2]=7;
+// // xvals[3]=1;
+// // yvals[3]=1;
+// let angle = -1;
+// for (let x = -10; x <= 10; x = x + 0.2) {
+// 	xvals.push(x);
+// 	// y=angle*x+1;
+// 	//let y = x * x * x + x * x + x;
+// 	// y = Math.abs(x);
+// 	//y = Math.sin(x);
+// 	y = Math.sqrt(100 - x * x);
+// 	yvals.push(y);
+// }
 
-graph.plot(xvals, yvals, "#ff0000", false, true);
-//graph.plot(xvals, yvals);
+// graph.plot(xvals, yvals, "#ff0000", false, true);
+// for (let x = -10; x <= 10; x = x + 0.2) {
+// 	xvals.push(x);
+// 	// y=angle*x+1;
+// 	//let y = x * x * x + x * x + x;
+// 	// y = Math.abs(x);
+// 	//y = Math.sin(x);
+// 	y = Math.sqrt(100 - x * x);
+// 	yvals.push(-y);
+// }
+
+// graph.plot(xvals, yvals, "#ff0000", false, true);
+// //graph.plot(xvals, yvals);
