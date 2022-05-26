@@ -220,19 +220,33 @@ let graph = new Graph(-10, 10, -10, 10, 350, 350, 600, 600);
 graph.drawgrid(1, 0.2, 1, 0.2);
 graph.drawaxes('x', 'y');
 
-let vs = new Array<Vector>();
+let vectorArray = new Array<Vector>();
 // let v1 = new Vector(1, 1);
-// let v2 = new Vector(2, 2);
+// let v2 = new Vector(2, 3);
 // let v3 = new Vector(3, 1);
-// vs.push(v1);
-// vs.push(v2);
-// vs.push(v3);
+
+// vectorArray.push(v1);
+// vectorArray.push(v2);
+// vectorArray.push(v3);
+
+for (let i=-10; i<=10; i++){
+	for (let j=-10; j<=10; j++){
+		let item=new Vector(-i,-j);
+		vectorArray.push(item);
+	}
+}
+
+for (let i=1; i<=10; i++){
+	for (let j=1; j<=10; j++){
+		console.log(i,j);
+	}
+}
 // for (let i = 1; i <= 9; i++) {
 // 	for (let j = 1; j <= 9; j++) {
-// 		vs.push(new Vector(10 - j, 10 - i));
+// 		vectorArray.push(new Vector(10 - j, 10 - i));
 // 	}
 // }
-graph.plotVector(vs, "#ff0000", true, true);
+graph.plotVector(vectorArray, "red", true, false);
 
 // let xvals = new Array<number>();
 // let yvals = new Array<number>();
