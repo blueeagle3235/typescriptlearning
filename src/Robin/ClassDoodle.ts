@@ -45,10 +45,40 @@ let d1 = new Dog();
 // let calculator = new Calculator();
 // let result = calculator.add(1, 1);
 // console.log(result);
+export class Position{
+    public X:number = 0;
+    public Y:number = 0;
+    constructor(x:number, y:number){
+        this.X=x;
+        this.Y=y;
+    }
+}
+let p1= new Position(1,3);
+let p2= new Position(5,5);
+
 export class Cat{
+    public moveUp():void{
+        this.Position.Y=this.Position.Y+1;
+    }
+    public moveDown():void{
+        this.Position.Y=this.Position.Y-1;
+    }
+    public moveLeft():void{
+        this.Position.X=this.Position.X-1;
+    }
+    public moveRight():void{
+        this.Position.X=this.Position.X+1;
+    }
+    public Position:Position = new Position(0,0);
+
+    public Color:string = "";
+
+    constructor(color:string='blue'){
+        this.Color=color;
+    }
     public HP:number = 100;
     public showHP():void{
-        console.log("Cat HP ", this.HP);
+        console.log("Color ", this.Color, " Cat HP ", this.HP, " Position:", this.Position);
     }
     public Attack(dog:Dog):void{
         dog.GetHit();
@@ -61,10 +91,18 @@ export class Cat{
     }
 
 }
-let c1 = new Cat();
-while(d1.HP>=0 && c1.HP>=0){
-    c1.Attack(d1);
-    d1.ShowHP();
-    d1.Attack(c1);
-    c1.showHP();    
-}
+let c1 = new Cat("red");
+c1.Position = new Position(10,10);
+c1.showHP();
+// let c2 = new Cat("green");
+// c2.Position = new Position(20,5);
+// c2.showHP();
+
+// while(d1.HP>=0 && c1.HP>=0){
+//     c1.Attack(d1);
+//     d1.ShowHP();
+//     d1.Attack(c1);
+//     c1.showHP();    
+// }
+c1.moveLeft();
+console.log(c1.Position);
